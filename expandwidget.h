@@ -1,0 +1,4 @@
+#ifndef EXPANDWIDGET_H
+#define EXPANDWIDGET_H
+
+#endif // EXPANDWIDGET_H
