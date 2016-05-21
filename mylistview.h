@@ -10,26 +10,34 @@
 #include <QInputDialog>
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QStandardItemModel>
+#include <database.h>
 
 class MyListView : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit MyListView();
+    explicit MyListView(QWidget *parent = 0);
+    void hideButtons();
     ~MyListView();
+
 
 private slots:
     void insertData();
 
     void deleteData();
 
-    void showData();
+    //void showData();
 
 private:
-
-    QStringListModel * model;
+    QSqlDatabase db2;
     QListView * listView;
+    QStandardItemModel * model;
+    QSqlTableModel *dmodel;
+    unsigned rowCnt = 0;
+    QPushButton *insertBtn;
+    QPushButton *delBtn;
 };
 
 #endif // MYLISTVIEW_H

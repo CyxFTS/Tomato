@@ -3,9 +3,6 @@
 
 #include <QWidget>
 
-namespace Ui {
-class Form;
-}
 
 class Form : public QWidget
 {
@@ -16,7 +13,7 @@ public:
     ~Form();
 
 private:
-    Ui::Form *ui;
+    Form *ui;
 };
 
 #endif // FORM_H
